@@ -1,0 +1,58 @@
+public class Solution {
+    public static boolean isValid(String s) {
+    	int cparl=0;
+    	int cparr=0;
+    	int cbral=0;
+    	int cbrar=0;
+    	int ccurl=0;
+    	int ccurr=0;
+    	char[] tmp = new char[s.length()];
+    	for (int i = 0; i < s.length(); i++) {
+    	    tmp[i] = s.charAt(i);
+    	}
+    	// System.out.println(tmp);
+    	for (int j=0;j<tmp.length;j++){
+    		// System.out.println(tmp[j]);
+//             if(j<tmp.length-1){
+//             if(tmp[j]=='('&&tmp[j+1]==']'||tmp[j+1]=='}'){
+//                 return false;}
+                
+//             }
+    		switch(tmp[j]){
+    			case '(':
+    				cparl=cparl+1;
+					break;
+    			case ')':
+    				cparr=cparr+1;
+					break;
+    			case '[':
+    				cbral++;
+					break;
+    			case ']':
+    				cbrar++;
+					break;
+    			case '{':
+    				ccurl++;
+					break;
+    			case '}':
+    				ccurr++;
+					break;
+    				
+    		}
+    	
+    	}
+    	// System.out.println(cparl);
+    	// System.out.println(cbral);
+    	// System.out.println(ccurl);
+    	// System.out.println(cparr);
+    	// System.out.println(cbrar);
+    	// System.out.println(ccurr);
+    	if (cparl-cparr==0&&cbral-cbrar==0&&ccurl-ccurr==0) {
+    		return true;
+    	}
+    	else {
+		return false;
+    	}
+        
+    }
+}
