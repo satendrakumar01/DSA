@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if  head and not head.next:
+        if not head.next:
             return None
         # if head and not head.next:
             
