@@ -11,7 +11,7 @@ class Solution:
             s.add(id(headA))
             headA=headA.next
         while headB:
-            if id(headB) in s:
+            if id(headB) in s:#here we are checking wheater id of same head is present here or not.
                 return headB
             headB=headB.next
         return None
