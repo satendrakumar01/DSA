@@ -7,7 +7,7 @@
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if root:
-            self.invertTree(root.left)
+            self.invertTree(root.left)#checking both sides of root if existis then again check their both side and at last swap
             self.invertTree(root.right)
             root.left,root.right=root.right,root.left
         return root
