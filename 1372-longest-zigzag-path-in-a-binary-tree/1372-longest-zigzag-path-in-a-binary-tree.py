@@ -9,9 +9,9 @@ class Solution:
         def f(root,k ,isleft):
             if root:
                 if isleft:
-                    return max(f(root.left,1,True),f(root.right,k+1,False))
+                    return max(f(root.left,1,True),f(root.right,k+1,False))#consicutively doing calling fucntions 
                 else:
-                    return max(f(root.left,k+1,True),f(root.right,1,False))
+                    return max(f(root.left,k+1,True),f(root.right,1,False))#same here but returning max of the the depth.
             return k-1
         return f(root,0,True)
         
